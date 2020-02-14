@@ -15,6 +15,7 @@ With the current version you can:
 -  convert a dictionary from/to the following formats:
 
    -  Bookeen Cybook Odyssey (R/W)
+   -  Bookeen Diva (R/W)
    -  CSV (R/W)
    -  EPUB (W only)
    -  MOBI (Kindle, W only)
@@ -26,7 +27,7 @@ With the current version you can:
 -  merge several definitions for the same headword
 -  sort by headword and/or by definition
 -  define your own input parser to merge/sort/edit definitions
--  define your own collation function (``bookeen`` output format only)
+-  define your own collation function (``bookeen`` and ``bkdiva`` output format only)
 -  output an EPUB file containing the dictionary (e.g., to cope with the
    lack of a search function of your eReader)
 -  output a MOBI (Kindle) dictionary
@@ -140,7 +141,7 @@ Usage
 
 ::
 
-    usage: 
+    usage:
       $ penelope -h
       $ penelope -i INPUT_FILE -j INPUT_FORMAT -f LANGUAGE_FROM -t LANGUAGE_TO -p OUTPUT_FORMAT -o OUTPUT_FILE [OPTIONS]
       $ penelope -i IN1,IN2[,IN3...] -j INPUT_FORMAT -f LANGUAGE_FROM -t LANGUAGE_TO -p OUTPUT_FORMAT -o OUTPUT_FILE [OPTIONS]
@@ -159,13 +160,13 @@ Usage
                             input file name prefix(es). Multiple prefixes must be
                             comma-separated.
       -j INPUT_FORMAT, --input-format INPUT_FORMAT
-                            from format (values: bookeen|csv|kobo|stardict|xml)
+                            from format (values: bookeen|bkdiva|csv|kobo|stardict|xml)
       -k, --keep            keep temporary files (default: False)
       -o OUTPUT_FILE, --output-file OUTPUT_FILE
                             output file name
       -p OUTPUT_FORMAT, --output-format OUTPUT_FORMAT
                             to format (values:
-                            bookeen|csv|epub|kobo|mobi|stardict|xml)
+                            bookeen|bkdiva|csv|epub|kobo|mobi|stardict|xml)
       -t LANGUAGE_TO, --language-to LANGUAGE_TO
                             to language (ISO 639-1 code)
       -v, --version         print version and exit
@@ -319,6 +320,26 @@ Note that the Bookeen dictionary software will select the dictionary to
 use by reading the ``dc:language`` metadata of your eBook. Make sure
 your eBooks have the proper ``dc:language`` metadata, otherwise the
 correct dictionary might not be loaded.
+
+Bookeen Diva Devices
+~~~~~~~~~~~~~~~~~~~~~~~
+
+For example, suppose you want to use an IT -> EN dictionary.
+
+1. On your PC, produce/download the IT -> EN dictionary files
+   ``it-en.dict2`` and ``it-en.dict2.idx``.
+2. Connect your Diva device to your PC via the USB cable.
+3. Using your file manager, copy the two files ``it-en.dict2`` and
+   ``it-en.dict2.idx`` from your PC into a ``dictionary/`` directory
+   on your Diva device.
+4. Unplug the cable, open a book in Italian and select a word: the
+   definition in English should appear. If not, check that the selected
+   dictionary is the one added. (For this test, select a common
+   word so you are sure it is present in the dictionary!)
+
+WARNING: the dictionary files must not contain dots except for the extension
+otherwise they may not be detected by the device. For instance ``en-it.dict2``
+is ok but ``en.it.dict2`` is not.
 
 Kobo Devices
 ~~~~~~~~~~~~
