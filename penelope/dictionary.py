@@ -60,6 +60,14 @@ def read_dictionary(args):
         # this is dealt with directly in format_bookeen.py
         import penelope.format_bookeen
         return penelope.format_bookeen.read(dictionary, args, args.input_file)
+    elif input_format == "bkdiva":
+        # NOTE
+        # for bkdiva format we cannot prepare the file paths
+        # as for the other formats, since we might have a compressed .zip file
+        # or an uncompressed pair (.dict2.idx and .dict2)
+        # this is dealt with directly in format_bkdiva.py
+        import penelope.format_bkdiva
+        return penelope.format_bkdiva.read(dictionary, args, args.input_file)
     elif input_format == "csv":
         input_file_paths = prepare_file_paths(args.input_file, ".csv")
         if input_file_paths is None:
@@ -102,6 +110,14 @@ def write_dictionary(dictionary, args):
         # this is dealt with directly in format_bookeen.py
         import penelope.format_bookeen
         return penelope.format_bookeen.write(dictionary, args, args.output_file)
+    elif output_format == "bkdiva":
+        # NOTE
+        # for bkdiva format we cannot add the file extension
+        # as for the other formats, since we might have to generate
+        # a compressed .zip file or an uncompressed pair (.dict2.idx and .dict2)
+        # this is dealt with directly in format_bkdiva.py
+        import penelope.format_bkdiva
+        return penelope.format_bkdiva.write(dictionary, args, args.output_file)
     elif output_format == "csv":
         output_file_path = add_extension(args.output_file, ".csv")
         import penelope.format_csv
