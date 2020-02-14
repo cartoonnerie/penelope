@@ -21,6 +21,7 @@ __status__ = "Production"
 
 INPUT_FORMATS = [
     "bookeen",
+    "bkdiva",
     "csv",
     "kobo",
     "stardict",
@@ -29,6 +30,7 @@ INPUT_FORMATS = [
 
 OUTPUT_FORMATS = [
     "bookeen",
+    "bkdiva",
     "csv",
     "epub",
     "kobo",
