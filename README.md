@@ -2,11 +2,12 @@
 
 **Penelope** is a multi-tool for creating, editing and converting dictionaries, especially for eReader devices.
 
-* Version: 3.1.3
-* Date: 2016-09-23
-* Developer: [Alberto Pettarin](http://www.albertopettarin.it/)
+This is a fork by Bookeen to include support for Bookeen Diva e-reader dictionary format.
+
+* Version: 3.2.0
+* Date: 2020-02-14
 * License: the MIT License (MIT)
-* Contact: [click here](http://www.albertopettarin.it/contact.html)
+* Contact: [click here](https://bookeen.com/contact)
 
 With the current version you can:
 
@@ -29,36 +30,9 @@ With the current version you can:
 
 ### Important Update
 
-* 2016-04-17 Sadly, I can no longer afford to spend time working on Penelope,
-  as my other FLOSS projects take 100% of my FLOSS time,
-  and I still need to pay rent and bills, spend time with family and friends, etc., as anyone else.
-  Therefore, I will not work on issues or pull requests,
-  **please do not expect they will be dealt with at all**.
-  I am actively **looking for other developers to take this project over**.
-  (This notice should be removed when the changeover happens.)
-  If you need to convert a dictionary and the current version of Penelope does not work for you,
-  you might want to have a look at [**PyGlossary**](https://github.com/ilius/pyglossary).
-  My most sincere apologies for the inconvenience.
-
+* 2020-02-14 Bookeen fork to support Diva dictionary format
 
 ## Installation
-
-### Using pip
-
-1. Open a console and type:
-
-    ```bash
-    $ [sudo] pip install penelope
-    ```
-
-2. That's it! Just run without arguments (or with `-h` or `--help`) to get the manual:
-
-    ```bash
-    $ penelope
-    ```
-
-This procedure will install `lxml` and `marisa-trie`.
-You might need to install `dictzip` (StarDict output) and  `kindlegen` (MOBI output) separately, see below.
 
 ### From source code
 
@@ -70,8 +44,7 @@ You might need to install `dictzip` (StarDict output) and  `kindlegen` (MOBI out
         $ git clone https://github.com/pettarin/penelope.git
         ```
 
-    * or download the [latest release](https://github.com/pettarin/penelope/releases) and uncompress it somewhere,
-    * or download the [current master ZIP](https://github.com/pettarin/penelope/archive/master.zip) and uncompress it somewhere.
+    * or download the [current master ZIP](https://github.com/BOOKEEN/penelope/archive/master.zip) and uncompress it somewhere.
 
 2. Open a console and enter the `penelope` (cloned) directory:
 

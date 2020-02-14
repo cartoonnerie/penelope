@@ -23,9 +23,9 @@ from penelope.utilities import delete_directory
 __author__ = "Valentin Hubert"
 __copyright__ = "Copyright 2020, Bookeen"
 __license__ = "MIT"
-__version__ = "3.1.3"
+__version__ = "3.2.0"
 __email__ = "valentin_hubert@bookeen.com"
-__status__ = "Dev"
+__status__ = "Production"
 
 CHUNK_FILE_PREFIX = "c_"
 CHUNK_SIZE = 262144     # 262144 = 2^18

@@ -11,7 +11,7 @@ from setuptools import setup
 __author__ = "Alberto Pettarin"
 __copyright__ = "Copyright 2012-2016, Alberto Pettarin (www.albertopettarin.it)"
 __license__ = "MIT"
-__version__ = "3.1.3"
+__version__ = "3.2.0"
 __email__ = "alberto@albertopettarin.it"
 __status__ = "Production"
 
@@ -19,7 +19,7 @@ setup(
     name="penelope",
     packages=["penelope"],
     package_data={"penelope": ["res/*"]},
-    version="3.1.3.0",
+    version="3.2.0.0",
     description="Penelope is a multi-tool for creating, editing and converting dictionaries, especially for eReader devices",
     author="Alberto Pettarin",
     author_email="alberto@albertopettarin.it",
