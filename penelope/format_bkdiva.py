@@ -274,7 +274,9 @@ def write(dictionary, args, output_file_path):
     print_debug("Updating index metadata... done", args.debug)
 
     # compact and close
-    sql_cursor.execute("vacuum")
+    sql_connection.isolation_level = None
+    sql_connection.execute("vacuum")
+    sql_connection.isolation_level = '' 
     sql_cursor.close()
     sql_connection.close()
 
